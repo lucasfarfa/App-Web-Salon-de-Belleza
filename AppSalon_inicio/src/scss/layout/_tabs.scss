@@ -8,6 +8,12 @@
         text-align: center;
         text-transform: uppercase;
         border: none; // quito bordes a los botones que vienen por default
+
+        &.actual{
+            background-color: $azul;
+            color: $blanco;
+        }
+
         &:hover{
             cursor: pointer;
         }

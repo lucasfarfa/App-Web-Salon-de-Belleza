@@ -1,7 +1,3 @@
-html {
-    
-}
-
 body {
     background-color: $negro;
 }
@@ -30,8 +26,9 @@ body {
     .seccion {
         display: none; // OCULTA LOS ELEMENOS EN LA PAGINA
         margin-top: $separacion / 2;
-        &:first-of-type{
-            display: block; // muestra solo el primer elemento (servicos)
-        }
     }    
+}
+
+.mostrar-seccion {
+    display: block!important;
 }
