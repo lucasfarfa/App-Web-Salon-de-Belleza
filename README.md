@@ -1,2 +1,2 @@
 # App Web Salon de Belleza
- app simulada de peluqeria
+ Aplicacion web para peluqueria con funciones tipo reservacion de turnos.
