@@ -1,0 +1,36 @@
+.listado-servicios{
+    @include tablet{ // que solo tenga 2 columnas en tablets o mayores
+        @include grid(2, 2rem);
+    }
+    .servicio {
+        margin-bottom: 2rem; // agregar separacion en celulares
+        background-color: $blanco;
+        padding: $separacion / 2;
+        border-radius:  1rem;
+
+        @include tablet{
+            margin-bottom: 0;// remueve el margin en tablets o mayores
+        }
+
+        p {
+            margin: 0 0 $separacion / 4 0;
+        }
+        
+        .nombre-servicio{
+            color: $negro;
+        }
+        .precio-servicio{
+            color: $azul;
+            margin: 0;
+            font-size: 3rem;
+            font-weight: $bold;
+        }
+        //&selecciona elemento actual (hacer azul el servicio al seleccionar)
+        &.seleccionado {
+            background-color: $azul;
+            p{
+                color: $blanco;
+            }
+        }
+    }   
+}
