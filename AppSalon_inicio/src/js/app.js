@@ -66,13 +66,14 @@ function cambiarSeccion() {
 async function mostrarServicios() { // genera codigo html de servicios
     // try catch, se usa cuando hay una parte critica de la aplicacion.
     try { //fetch api con async await
-        const resultado = await fetch('./servicios.json');//a fetch hay que especificarle que tipo de respuesta
+
+        const url = 'http://localhost:3000/AppSalon_inicio/servicios.php'; //url de servicios.php
+
+        const resultado = await fetch(url);//a fetch hay que especificarle que tipo de respuesta
         const db = await resultado.json(); // le especifico a fetch que es un archivo json y guardo el archivo json enn db
-
-        const { servicios } = db // de db extraigo servicios(archivo) y lo guardo en archivo var {destructuring}
-
+        
         // generar html
-        servicios.forEach(servicio => {
+        db.forEach(servicio => {
             const { id, nombre, precio } = servicio; // destructuring del array y extraigo ID, NOMBRE, PRECIO -> variables creadas con la informacion.
 
             // ------ DOM scripting ------
